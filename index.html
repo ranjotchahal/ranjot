@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RMPT – Repair My Phone Today | Oxford Phone Repairs</title>
+  <meta name="description" content="RMPT – Repair My Phone Today provides fast, trusted phone, tablet, and laptop repairs in Oxford with same-day options and a 12-month warranty on repairs.">
+  <meta property="og:title" content="RMPT – Repair My Phone Today">
+  <meta property="og:description" content="Fast repairs, trusted service in Oxford. Same-day options and warranty-backed repairs.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com">
+  <meta property="og:image" content="https://example.com/og-image.jpg">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --secondary: #0f172a;
+      --bg: #f6f8fb;
+      --text: #0f172a;
+      --muted: #475569;
+      --card: #ffffff;
+      --border: #e2e8f0;
+      --success: #16a34a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    .top-bar {
+      background: var(--secondary);
+      color: #ffffff;
+      font-size: 0.9rem;
+      padding: 0.4rem 0;
+    }
+
+    .top-bar .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      gap: 1rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 700;
+      color: var(--secondary);
+    }
+
+    .logo-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: var(--primary);
+      color: #ffffff;
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.25rem;
+      margin: 0;
+      padding: 0;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    nav a {
+      color: var(--secondary);
+      padding-bottom: 0.2rem;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s ease;
+    }
+
+    nav a:focus,
+    nav a:hover {
+      border-color: var(--primary);
+      outline: none;
+    }
+
+    .hero {
+      padding: 3.5rem 0 3rem;
+      background: linear-gradient(135deg, #ffffff 0%, #eef2ff 100%);
+    }
+
+    .hero-content {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 3vw + 1rem, 3rem);
+      margin-bottom: 0.6rem;
+      color: var(--secondary);
+    }
+
+    .hero p {
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #e0e7ff;
+      color: var(--secondary);
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+    }
+
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1.4rem;
+      border-radius: 999px;
+      font-weight: 600;
+      border: 2px solid var(--primary);
+      background: var(--primary);
+      color: #ffffff;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      min-width: 150px;
+    }
+
+    .button.secondary {
+      background: #ffffff;
+      color: var(--primary);
+    }
+
+    .button:focus,
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(37, 99, 235, 0.2);
+      outline: none;
+    }
+
+    section {
+      padding: 3rem 0;
+    }
+
+    .section-title {
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title h2 {
+      margin: 0 0 0.4rem;
+      font-size: clamp(1.6rem, 2vw + 1rem, 2.2rem);
+      color: var(--secondary);
+    }
+
+    .section-title p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 1.4rem;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+    }
+
+    .card h3 {
+      margin: 0.3rem 0 0.6rem;
+      color: var(--secondary);
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+    }
+
+    .pricing-table th,
+    .pricing-table td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+
+    .pricing-table th {
+      background: #f1f5f9;
+      color: var(--secondary);
+    }
+
+    .pricing-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .review-stars {
+      color: #f59e0b;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .contact-wrapper {
+      display: grid;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    form {
+      display: grid;
+      gap: 1rem;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      font-family: inherit;
+      font-size: 0.95rem;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: 2px solid rgba(37, 99, 235, 0.3);
+      border-color: var(--primary);
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-message {
+      display: none;
+      padding: 0.85rem 1rem;
+      border-radius: 10px;
+      background: #dcfce7;
+      color: var(--success);
+      font-weight: 600;
+    }
+
+    footer {
+      background: var(--secondary);
+      color: #e2e8f0;
+      padding: 2rem 0;
+    }
+
+    footer a {
+      color: #e2e8f0;
+      text-decoration: underline;
+    }
+
+    .footer-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 1.5rem;
+      bottom: 1.5rem;
+      background: var(--primary);
+      color: #ffffff;
+      padding: 0.8rem 1rem;
+      border-radius: 999px;
+      font-weight: 600;
+      box-shadow: 0 12px 24px rgba(37, 99, 235, 0.3);
+      z-index: 999;
+    }
+
+    .floating-whatsapp:focus,
+    .floating-whatsapp:hover {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+    }
+
+    .cookie-bar {
+      position: fixed;
+      left: 1rem;
+      right: 1rem;
+      bottom: 1rem;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
+      padding: 1rem;
+      border-radius: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      z-index: 1000;
+    }
+
+    .cookie-actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .cookie-actions button {
+      border: none;
+      background: var(--primary);
+      color: #ffffff;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .cookie-actions button.secondary {
+      background: #e2e8f0;
+      color: var(--secondary);
+    }
+
+    @media (min-width: 768px) {
+      .hero-content {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+      }
+
+      .grid.services {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .grid.reviews {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .contact-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .cookie-bar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <span>Oxford Phone Repairs</span>
+      <span>Call: 01865 000 000</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <a class="logo" href="#home" aria-label="RMPT homepage">
+        <span class="logo-mark">RMPT</span>
+        <span>
+          RMPT – Repair My Phone Today<br>
+          <small>Fast Repairs • Trusted Service • Oxford</small>
+        </span>
+      </a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#prices">Prices</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="home" class="hero">
+    <div class="container hero-content">
+      <div>
+        <span class="badge">Same-day repairs available</span>
+        <h1>Phone, Tablet &amp; Laptop Repairs in Oxford</h1>
+        <p>Same-day repairs available. Genuine parts options. 12-month warranty on repairs*</p>
+        <div class="cta-group">
+          <a class="button" href="#contact">Get a Quote</a>
+          <a class="button secondary" href="tel:01865000000">Call Now</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Why choose RMPT?</h3>
+        <p>Experienced technicians, clear pricing, and fast turnaround. We handle popular phone models, tablets, and laptops with care.</p>
+        <ul>
+          <li>Free diagnostics on most repairs</li>
+          <li>Walk-in and appointment options</li>
+          <li>Warranty-backed workmanship</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Services</h2>
+        <p>Professional repairs for all major devices.</p>
+      </div>
+      <div class="grid services">
+        <div class="card">
+          <h3>Screen Replacement</h3>
+          <p>High-quality screens with quick turnaround for cracked or unresponsive displays.</p>
+        </div>
+        <div class="card">
+          <h3>Battery Replacement</h3>
+          <p>Restore battery life with safe, reliable battery swaps.</p>
+        </div>
+        <div class="card">
+          <h3>Charging Port Repair</h3>
+          <p>Fix unreliable charging or connectivity issues for phone and tablet ports.</p>
+        </div>
+        <div class="card">
+          <h3>Camera / Speaker Repair</h3>
+          <p>Clear audio and sharp photos again with focused component repairs.</p>
+        </div>
+        <div class="card">
+          <h3>Water Damage Diagnostics</h3>
+          <p>Fast diagnostics and recovery steps for water-exposed devices.</p>
+        </div>
+        <div class="card">
+          <h3>Laptop Repairs</h3>
+          <p>Upgrades and repairs including storage, keyboard, and display replacements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="prices">
+    <div class="container">
+      <div class="section-title">
+        <h2>Pricing</h2>
+        <p>Transparent, competitive pricing to keep you informed.</p>
+      </div>
+      <table class="pricing-table" aria-label="Pricing table">
+        <thead>
+          <tr>
+            <th>Device</th>
+            <th>Typical Repair</th>
+            <th>Price (from)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>iPhone</td>
+            <td>Screen Replacement</td>
+            <td>£79</td>
+          </tr>
+          <tr>
+            <td>Samsung</td>
+            <td>Battery Replacement</td>
+            <td>£65</td>
+          </tr>
+          <tr>
+            <td>iPad</td>
+            <td>Charging Port Repair</td>
+            <td>£89</td>
+          </tr>
+          <tr>
+            <td>Laptop</td>
+            <td>Diagnostics &amp; Repair</td>
+            <td>£99</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><strong>Prices vary by model. Contact us for exact quote.</strong></p>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews">
+    <div class="container">
+      <div class="section-title">
+        <h2>Trusted by Oxford locals</h2>
+        <p>Real experiences from our customers.</p>
+      </div>
+      <div class="grid reviews">
+        <div class="card">
+          <div class="review-stars">★★★★★</div>
+          <h3>Quick and reliable</h3>
+          <p>My phone screen was replaced in under two hours. Friendly service and great communication.</p>
+          <p><strong>Alex M.</strong></p>
+        </div>
+        <div class="card">
+          <div class="review-stars">★★★★★</div>
+          <h3>Transparent pricing</h3>
+          <p>Clear quote upfront and no surprises. The repair looks like new.</p>
+          <p><strong>Sana R.</strong></p>
+        </div>
+        <div class="card">
+          <div class="review-stars">★★★★★</div>
+          <h3>Saved my laptop</h3>
+          <p>They diagnosed the issue quickly and repaired it the same day. Highly recommended.</p>
+          <p><strong>Jordan L.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contact RMPT</h2>
+        <p>Tell us about your device and we will get back quickly.</p>
+      </div>
+      <div class="contact-wrapper">
+        <div>
+          <h3>Visit or call</h3>
+          <p>Oxford City Centre, OX1 1AA</p>
+          <p>Phone: 01865 000 000</p>
+          <p>Email: hello@rmpt-repairs.co.uk</p>
+          <p>Same-day appointments available. Walk-ins welcome when possible.</p>
+        </div>
+        <div>
+          <form id="contact-form" novalidate>
+            <div>
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" required autocomplete="name">
+            </div>
+            <div>
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+            <div>
+              <label for="phone">Phone *</label>
+              <input type="tel" id="phone" name="phone" required autocomplete="tel">
+            </div>
+            <div>
+              <label for="device">Device Model *</label>
+              <input type="text" id="device" name="device" required>
+            </div>
+            <div>
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button class="button" type="submit">Send Request</button>
+            <div class="form-message" role="status" aria-live="polite">
+              Thanks! Your request has been sent. We will respond shortly.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3>RMPT – Repair My Phone Today</h3>
+        <p>Oxford City Centre, OX1 1AA</p>
+      </div>
+      <div>
+        <h3>Opening Hours</h3>
+        <p>Mon–Fri: 9am – 6pm</p>
+        <p>Sat: 10am – 4pm</p>
+        <p>Sun: Closed</p>
+      </div>
+      <div>
+        <h3>Info</h3>
+        <p><a href="#">Privacy Policy</a></p>
+        <p><a href="#">Terms &amp; Conditions</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a class="floating-whatsapp" href="https://example.com" aria-label="Chat on WhatsApp">WhatsApp Chat</a>
+
+  <!-- Cookie Notice -->
+  <div class="cookie-bar" role="dialog" aria-live="polite" aria-label="Cookie notice">
+    <div>
+      <strong>Cookie notice</strong>
+      <p>We use essential cookies to improve your browsing experience. By continuing, you agree to our cookie policy.</p>
+    </div>
+    <div class="cookie-actions">
+      <button type="button" class="secondary" id="cookie-settings">Settings</button>
+      <button type="button" id="cookie-accept">Accept</button>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById("contact-form");
+    const message = document.querySelector(".form-message");
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      message.style.display = "block";
+      form.reset();
+    });
+
+    const cookieBar = document.querySelector(".cookie-bar");
+    const acceptButton = document.getElementById("cookie-accept");
+    const settingsButton = document.getElementById("cookie-settings");
+
+    const dismissCookieBar = () => {
+      cookieBar.style.display = "none";
+    };
+
+    acceptButton.addEventListener("click", dismissCookieBar);
+    settingsButton.addEventListener("click", dismissCookieBar);
+  </script>
+</body>
+</html>
